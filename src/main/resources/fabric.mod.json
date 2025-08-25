@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "smava",
+	"version": "${version}",
+	"name": "SMAVA",
+	"description": "SMAll Vanilla-like Additions",
+	"authors": [
+		"neins"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/smava/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.neins.smava.SMAVA"
+		],
+		"client": [
+			"com.neins.smava.SMAVAClient"
+		]
+	},
+	"mixins": [
+		"smava.mixins.json",
+		{
+			"config": "smava.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.7",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
